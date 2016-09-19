@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
     tools:context="com.dashline.MainActivity">
-
 
     <TextView
         android:id="@+id/txtDashedLine"
@@ -17,9 +15,24 @@
         android:layout_centerVertical="true"
         android:background="@drawable/dashline" />
 
-    <com.dashline.ui.DashedLine
-        android:layout_width="1px"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+        <com.dashline.ui.DashedLine
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:dashedLineColor="#00F"/>
+    </LinearLayout>
 
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.dashline.ui.DashedLine
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            app:isVertical="true"
+            app:dashedLineColor="#00F"/>
+    </LinearLayout>
+
+</LinearLayout>
